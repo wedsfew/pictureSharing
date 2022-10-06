@@ -1,18 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/login_bg"
+    android:id="@+id/logIn"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <!-- 账号栏 -->
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:text="@string/logIn"
+        android:textSize="50sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="100dp">
+
+        <!-- 图片显示，true是，是否显示图片 -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            />
+        <!-- 提示词和下划线 -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:maxLines="1" />
+    </RelativeLayout>
+
+
+    <!-- 密码栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp">
+        <!-- 图片显示，true是，是否显示图片 -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_baseline_lock_24"/>
+
+        <!-- 提示词和下划线 -->
+        <EditText
+            android:id="@+id/etPwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="4dp"
+            android:hint="@string/password"
+            android:textColor="@color/white"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:autofillHints="密码" />
+
+        <!-- 密码可见，不可见的眼睛图标 -->
+        <ImageView
+            android:id="@+id/iv_pwd_switch"
+            android:layout_width="32dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_baseline_visibility_off_24" />
+
+    </RelativeLayout>
+
+    <!-- 登录按钮 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        >
+
+        <Button
+            android:id="@+id/signIn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/radius"
+            android:text="@string/signIn"
+            android:layout_margin="16dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- 忘记 -->
+        <TextView
+            android:id="@+id/forgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="200dp"
+            android:gravity="left|center"
+            android:text="@string/forgetPassword"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            tools:ignore="RtlHardcoded" />
+
+        <!-- 注册 -->
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="80dp"
+            android:gravity="right|center"
+            android:layout_marginBottom="200dp"
+            android:text="@string/signUp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            tools:ignore="RtlHardcoded" />
+    </LinearLayout>
+
+</LinearLayout>
