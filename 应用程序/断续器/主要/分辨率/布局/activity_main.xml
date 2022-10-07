@@ -10,6 +10,7 @@
     android:orientation="vertical">
 
     <!-- 账号栏android:background="@drawable/login_bg" -->
+     <!-- 我在测试这个 -->
 
     <TextView
         android:layout_width="wrap_content"
