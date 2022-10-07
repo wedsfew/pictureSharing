@@ -5,12 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg"
     android:id="@+id/logIn"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <!-- 账号栏 -->
+    <!-- 账号栏android:background="@drawable/login_bg" -->
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,12 +17,13 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
         android:text="@string/logIn"
+        android:textColor="#1565C0"
         android:textSize="50sp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="60dp">
 
         <!-- 图片显示，true是，是否显示图片 -->
         <ImageView
@@ -51,7 +51,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        >
         <!-- 图片显示，true是，是否显示图片 -->
         <ImageView
             android:layout_width="32dp"
@@ -71,7 +72,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="4dp"
             android:hint="@string/password"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:inputType="textPassword"
             android:maxLines="1"
             android:autofillHints="密码" />
@@ -94,7 +95,7 @@
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:layout_height="0dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         >
 
         <Button
@@ -106,24 +107,25 @@
             android:background="@drawable/radius"
             android:text="@string/signIn"
             android:layout_margin="16dp"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textSize="20sp" />
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:layout_marginBottom="150dp">
         <!-- 忘记 -->
         <TextView
             android:id="@+id/forgetPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:layout_marginBottom="200dp"
             android:gravity="left|center"
             android:text="@string/forgetPassword"
-            android:textColor="@color/blue"
+            android:textColor="@color/black"
             android:textSize="20sp"
             tools:ignore="RtlHardcoded" />
 
@@ -134,7 +136,6 @@
             android:layout_height="40dp"
             android:layout_marginLeft="80dp"
             android:gravity="right|center"
-            android:layout_marginBottom="200dp"
             android:text="@string/signUp"
             android:textColor="@color/black"
             android:textSize="20sp"
